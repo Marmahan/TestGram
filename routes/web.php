@@ -17,9 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//show a post
+//create a post (show the form)
 Route::get('/p/create', 'PostsController@create');
 
+//show a post
+Route::get('/p/{post}', 'PostsController@show');
+
+//Store a new post
 Route::post('/p', 'PostsController@store');
 
 //show a user profile

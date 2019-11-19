@@ -4,7 +4,7 @@
 <div class="container">
 
 
-    <form action="/p" encrypt="multipart/form-data" method="post">
+    <form action="/p" enctype="multipart/form-data" method="post">
 
         {{-- Secure form submission --}}
         @csrf
@@ -38,9 +38,9 @@
                         <strong> {{ $errors->first('image') }}</strong>
                     @endif --}}
 
-                    @error('image')
+                    {{-- @error('image')
                         <strong>{{ $message }}</strong>
-                    @enderror
+                    @enderror --}}
 
                 </div>
 
