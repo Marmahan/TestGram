@@ -21,6 +21,7 @@ class CreateProfilesTable extends Migration
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('url')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
 
             $table->index('user_id');
@@ -32,7 +33,7 @@ class CreateProfilesTable extends Migration
      *
      * @return void
      */
-    public function d                                                                                                                              own()
+    public function down()
     {
         Schema::dropIfExists('profiles');
     }
